@@ -1,132 +1,203 @@
-# 🚀 AI Resume Analyzer & Job Match System
+# 🚀 AI Resume Analyzer & Skill Match System
 
 ## 📌 Overview
 
-The **AI Resume Analyzer** is a smart web application that evaluates resumes by comparing them with job descriptions. It provides a match score, identifies missing skills, and helps users improve their resumes for better job opportunities.
+The **AI Resume Analyzer & Skill Match System** is a full-stack web application that evaluates resumes by comparing them with job descriptions. It generates a match score, identifies matching and missing skills, and provides insights to improve candidate profiles.
+
+This project simulates a real-world **Applicant Tracking System (ATS)** used by recruiters.
 
 ---
 
 ## ✨ Features
 
-* 📄 Resume Upload (PDF/DOC)
-* 🧠 AI-based Resume Parsing
+* 📄 Upload Resume (PDF/DOC)
+* 🧠 AI-Based Resume Parsing
 * 📊 Match Score Calculation
 * ✅ Matching Skills Identification
 * ❌ Missing Skills Detection
 * 📈 Visual Result Dashboard
+* ⚡ Fast and Interactive UI
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend:**
+### Frontend
 
 * React.js
-* HTML, CSS, JavaScript
+* HTML5, CSS3
+* JavaScript
 
-**Backend:**
+### Backend
 
-* Node.js / Express.js
+* Node.js
+* Express.js
 
-**AI / NLP:**
+### Database
+
+* MongoDB (if used)
+
+### AI / NLP Techniques
 
 * Keyword Extraction
-* Text Similarity Algorithms
+* Text Matching
+* Skill Gap Analysis
 
 ---
 
 ## 🔄 Project Workflow
 
-1. Upload Resume
-2. Enter Job Description
-3. Analyze Resume
-4. View Results:
+1. User uploads resume
+2. User enters job description
+3. Backend processes resume content
+4. AI logic compares resume with job description
+5. System generates:
 
    * Match Score
    * Matching Skills
    * Missing Skills
+6. Results displayed on dashboard
 
 ---
 
 ## 📂 Folder Structure
 
 ```
-frontend/     → User Interface (React)
-backend/      → API & Logic
-screenshots/  → UI Images
-sample_data/  → Test Files
+AI-Resume-Analyzer/
+│
+├── frontend/        # React UI
+├── backend/         # API & logic
+├── screenshots/     # UI images
+├── sample_data/     # Sample resume & JD
+├── README.md
+└── .gitignore
 ```
 
 ---
 
 ## 📸 Screenshots
 
-(Add your images inside /screenshots folder)
+### 🏠 Home Page
+
+![Home](screenshots/home.png)
+
+### 📤 Upload Resume
+
+![Upload](screenshots/upload.png)
+
+### 📊 Result Dashboard
+
+![Result](screenshots/result.png)
 
 ---
 
 ## ⚙️ Installation & Setup
 
-### 1. Clone the repository
+### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/AI-Resume-Analyzer.git
-cd AI-Resume-Analyzer
+git clone https://github.com/gayathriramakrishnan1/AI-Resume-Analyzer-Skill-Match-System.git
+cd AI-Resume-Analyzer-Skill-Match-System
 ```
-
-### 2. Install dependencies
-
-```bash
-cd frontend
-npm install
-
-cd ../backend
-npm install
-```
-
-### 3. Run the project
-
-```bash
-# Start backend
-cd backend
-npm start
-
-# Start frontend
-cd frontend
-npm start
-```
-
-## API Endpoints
-
-POST /analyze
-- Upload resume
-- Provide job description
-
-Response:
-{
-  score: 85,
-  matchingSkills: [],
-  missingSkills: []
-}
 
 ---
 
-## 📊 Future Enhancements
+### 2️⃣ Setup Backend
 
-* 🔍 ATS Score Improvement Suggestions
-* 🤖 ML Model Integration
-* 📧 Resume Feedback System
-* 🌐 Deployment (AWS / Azure)
+```bash
+cd backend
+npm install
+```
+
+Create `.env` file:
+
+```
+PORT=5000
+MONGO_URI=your_database_url
+JWT_SECRET=your_secret_key
+```
+
+Run backend:
+
+```bash
+npm start
+```
+
+---
+
+### 3️⃣ Setup Frontend
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+---
+
+## 🔌 API Endpoints
+
+### 📌 Analyze Resume
+
+```
+POST /analyze
+```
+
+### Request:
+
+* Resume file
+* Job description
+
+### Response:
+
+```json
+{
+  "score": 85,
+  "matchingSkills": ["JavaScript", "React"],
+  "missingSkills": ["Node.js", "MongoDB"]
+}
+```
+
+---
+
+## 🧠 AI Logic
+
+The system uses simple but effective techniques:
+
+* Extracts keywords from resume and job description
+* Compares skills using text matching
+* Calculates similarity score
+* Identifies missing skills (skill gap analysis)
+
+---
+
+## 🚀 Future Enhancements
+
+* 🔍 Advanced ATS Scoring Algorithm
+* 🤖 Machine Learning Integration
+* 📧 Resume Improvement Suggestions
+* 🌐 Live Deployment
+* 📊 Detailed Analytics Dashboard
+
+---
+
+## 🌐 Live Demo
+
+*(Add after deployment)*
+Frontend: https://your-frontend-link
+Backend: https://your-backend-link
 
 ---
 
 ## 👩‍💻 Author
 
-Gayathri Ramakrishnan
+**Gayathri Ramakrishnan**
 Final Year CSE Student
 
 ---
 
-## ⭐ Give a Star
+## ⭐ Support
 
-If you like this project, don't forget to ⭐ the repository!
+If you like this project, give it a ⭐ and share it!
+
+---
