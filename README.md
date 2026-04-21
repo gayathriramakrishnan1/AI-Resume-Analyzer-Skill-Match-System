@@ -100,6 +100,19 @@ cd frontend
 npm start
 ```
 
+## API Endpoints
+
+POST /analyze
+- Upload resume
+- Provide job description
+
+Response:
+{
+  score: 85,
+  matchingSkills: [],
+  missingSkills: []
+}
+
 ---
 
 ## 📊 Future Enhancements
