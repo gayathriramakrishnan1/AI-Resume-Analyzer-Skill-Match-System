@@ -28,10 +28,6 @@ The **AI Resume Analyzer** is a smart web application that evaluates resumes by 
 
 * Node.js / Express.js
 
-**Database:**
-
-* MongoDB (if used)
-
 **AI / NLP:**
 
 * Keyword Extraction
